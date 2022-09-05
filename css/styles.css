@@ -232,7 +232,17 @@ footer .link:focus {
 /* portfolio.html */
 
 /* filter */
+.filter {
+  padding-bottom: 16px;
+  margin-bottom: 34px;
+}
 .filter .button {
+  min-width: 73px;
+  padding: 6px 22px;
+
+  border-radius: 4px;
+  border-color: transparent;
+
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
@@ -241,6 +251,11 @@ footer .link:focus {
   color: var(--title-color);
   background-color: var(--filter-button-background);
   cursor: pointer;
+}
+
+.filter .button:first-child {
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .filter .button:hover,
@@ -255,7 +270,19 @@ footer .link:focus {
   text-decoration: none;
 }
 
+.gallery .item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.gallery .item-image {
+  margin-bottom: 20px;
+}
+
 .gallery .item-title {
+  margin-top: 0;
+  margin: 0 24px 4px;
+
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -264,6 +291,7 @@ footer .link:focus {
 }
 
 .gallery .item-description {
+  margin: 0 24px;
   font-size: 16px;
   line-height: 1.875;
   color: var(--main-text-color);
