@@ -9,6 +9,7 @@
   --footer-contact-color: rgba(255, 255, 255, 0.6);
   --footer-background-color: #2f303a;
   --filter-button-background: #f5f4fa;
+  --secondary-section-background: #f5f4fa;
 }
 body {
   font-family: 'Roboto', 'Helvetica Neue', 'Verdana', 'Tahoma', sans-serif;
@@ -20,15 +21,39 @@ body {
   background-color: var(--main-background-color);
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  outline: 1px solid tomato;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .list {
+  margin-top: 0;
+  margin-bottom: 0;
   list-style-type: none;
 }
 
 .title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
   color: var(--title-color);
 }
 
 /* header section */
+
+header.section {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
 
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -75,9 +100,11 @@ body {
 
 .hero {
   background-color: var(--footer-background-color);
+  text-align: center;
 }
 
 .hero .title {
+  margin-bottom: 30px;
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
@@ -87,6 +114,12 @@ body {
 }
 
 .order-button {
+  min-width: 216px;
+  padding: 10px 32px;
+
+  border-radius: 4px;
+  border-color: transparent;
+
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -100,32 +133,52 @@ body {
 /* advantage section */
 
 .hidden {
+  margin: 0;
+  padding: 0;
+  height: 0;
   visibility: hidden;
 }
 
 .advantage .title {
+  margin-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.17;
   text-transform: uppercase;
 }
 
+.advantage p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 /* our work section */
 
-.our-work .title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.17;
+.our-work {
+  text-align: center;
+}
+.our-work.section {
+  padding-top: 0;
 }
 
 /* our team */
-.our-team .title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.17;
+.our-team {
+  background-color: var(--secondary-section-background);
+  text-align: center;
 }
 
+.our-team .item {
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.member-photo {
+  margin-bottom: 30px;
+}
 .member-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 1.17;
@@ -133,6 +186,9 @@ body {
 }
 
 .member-position {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
   font-size: 16px;
   line-height: 1.17;
 }
@@ -143,10 +199,19 @@ footer {
   background-color: var(--footer-background-color);
 }
 
+footer.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
   color: var(--main-white-color);
 }
 
+footer li:not(:last-child) {
+  margin-bottom: 9px;
+}
 footer .link {
   color: var(--footer-contact-color);
   text-decoration: none;
