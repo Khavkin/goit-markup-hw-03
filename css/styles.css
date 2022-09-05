@@ -10,6 +10,8 @@
   --footer-background-color: #2f303a;
   --filter-button-background: #f5f4fa;
   --secondary-section-background: #f5f4fa;
+  --header-border-color: #ececec;
+  --gallery-item-border: #eeeeee;
 }
 body {
   font-family: 'Roboto', 'Helvetica Neue', 'Verdana', 'Tahoma', sans-serif;
@@ -55,6 +57,9 @@ header.section {
   padding-bottom: 25px;
 }
 
+header {
+  border-bottom: 1px solid Var(--header-border-color);
+}
 .logo {
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
@@ -272,7 +277,7 @@ footer .link:focus {
 
 .gallery .item {
   padding-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--gallery-item-border);
 }
 
 .gallery .item-image {
