@@ -35,6 +35,8 @@ img {
 
 .container {
   width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 
   outline: 1px solid tomato;
@@ -197,6 +199,14 @@ header {
   display: flex;
   gap: 30px;
 }
+
+.advantage .card {
+  flex-basis: 270px;
+}
+
+/* .advantage .card:not(:first-child) {
+  margin-left: 30px;
+} */
 
 .advantage .title {
   margin-bottom: 10px;
