@@ -23,9 +23,24 @@ body {
   background-color: var(--main-background-color);
 }
 
-ul {
-  padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding-left: 0;
   list-style: none;
 }
 
@@ -320,6 +335,8 @@ footer .link:focus {
 
 /* filter */
 .filter {
+  display: flex;
+  justify-content: center;
   padding-bottom: 16px;
   margin-bottom: 34px;
 }
@@ -333,11 +350,15 @@ footer .link:focus {
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.62;
+  line-height: 1.625;
   letter-spacing: 0.03em;
   color: var(--title-color);
   background-color: var(--filter-button-background);
   cursor: pointer;
+}
+
+.filter-item:not(:first-child) {
+  margin-left: 8px;
 }
 
 .filter .button:first-child {
@@ -353,22 +374,34 @@ footer .link:focus {
 
 /* gallery */
 
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
 .gallery .link {
   text-decoration: none;
 }
 
-.gallery .item {
-  padding-bottom: 20px;
+.gallery .card {
+  flex-basis: 370px;
+
+  margin-left: 30px;
+  margin-bottom: 30px;
+
   border-bottom: 1px solid var(--gallery-item-border);
 }
 
-.gallery .item-image {
-  margin-bottom: 20px;
+.gallery .desc-wrapper {
+  padding: 20px 24px;
 }
 
-.gallery .item-title {
+.gallery .card-title {
   margin-top: 0;
-  margin: 0 24px 4px;
+  margin-bottom: 4px;
 
   font-size: 18px;
   font-weight: 700;
@@ -377,8 +410,7 @@ footer .link:focus {
   color: var(--title-color);
 }
 
-.gallery .item-description {
-  margin: 0 24px;
+.gallery .card-description {
   font-size: 16px;
   line-height: 1.875;
   color: var(--main-text-color);
